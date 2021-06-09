@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --main-text-color: hsl(238, 29%, 16%);
+  --text-hover-color: hsl(14, 88%, 65%);
+  --divider-color: hsl(240, 5%, 91%);
+  --secondary-text-color: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* To make the gradient fill the viewport*/
+html {
+  height: 100vh;
+}
+
+path {
+  pointer-events: none;
+}
+.hide {
+  display: none;
+}
+body {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--soft-violet),
+    var(--soft-blue)
+  );
+  background-repeat: no-repeat;
+}
+.card {
+  position: relative;
+  width: 350px;
+  margin: 75px auto;
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+img {
+  position: absolute;
+  padding: 20px;
+  height: 200px;
+  top: -107px;
+  left: 40px;
+  background-image: url("./images//bg-pattern-mobile.svg");
+  background-position: 70% 100%;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+.card-info {
+  margin-top: 100px;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 35px;
+}
+.question-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--divider-color);
+}
+.question-box .question {
+  font-size: 0.9rem;
+  color: var(--main-text-color);
+  margin-bottom: 15px;
+  flex-basis: 90%;
+}
+.question:hover {
+  color: var(--text-hover-color);
+  cursor: pointer;
+}
+.bold {
+  font-weight: bold;
+}
+.question,
+.answer {
+  width: 80%;
+  margin-bottom: 15px;
+  color: var(--dark-grayish-blue);
+}
+
+svg {
+  margin-top: 3px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 1000px) {
+  .card {
+    width: 1000px;
+    min-height: 450px;
+    display: flex;
+    padding-left: 0px;
+    overflow: hidden;
+    padding-bottom: 0px;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-container,
+  .card-info {
+    width: 50%;
+  }
+  .card-info {
+    margin-top: 50px;
+  }
+  .card-info h1 {
+    text-align: left;
+  }
+  img {
+    position: relative;
+    top: 6px;
+    padding-bottom: 50px;
+    left: -60px;
+    height: auto;
+    background-image: url("./images//bg-pattern-desktop.svg");
+    background-size: 750px;
+    background-repeat: no-repeat;
+    background-position: 108% -200px;
+  }
+}
